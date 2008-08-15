@@ -1,0 +1,54 @@
+= pass_nils_to
+
+Pass nils to your methods and see if they explode.
+
+== Installation
+
+Install the gem directly:
+
+  gem sources -a http://gems.github.com (you only have to do this once)
+  sudo gem install pelargir-pass_nils_to
+  
+Or install the gem in your Rails project:
+  
+  gem sources -a http://gems.github.com
+  script/plugin install pelargir-pass_nils_to
+
+Or clone the project:
+
+  git clone git://github.com/pelargir/pass_nils_to.git
+
+== Usage
+
+Pass nils to your method thusly:
+
+  class Parser
+    def parse(arg1, arg2)
+      ...
+    end
+  end
+  
+  parser = Parser.new
+  pass_nils_to(:parse, parser)
+  
+This would pass nils to the #parse method in these combinations:
+
+  parse(nil, "foo")
+  parse("foo", nil)
+  parse(nil, nil)
+  
+An arbitrary number of arguments are supported, so you can try passing
+nils to methods with three arguments, four, five, etc.
+
+== Running Unit Tests
+
+Use the rake command to run the unit tests for the plugin. The tests require
+that the Mocha gem be installed locally:
+
+  sudo gem install mocha
+
+== Resources
+
+Repository: http://github.com/pelargir/pass_nils_to/
+Blog: http://matthewbass.com
+Author: Matthew Bass
