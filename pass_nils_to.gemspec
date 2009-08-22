@@ -10,13 +10,14 @@ Gem::Specification.new do |s|
   s.authors  = ["Matthew Bass"]
   s.files    = [
     "CHANGELOG",
+    "init.rb",
+  	"lib/pass_nils_to.rb",
     "MIT-LICENSE",
+		"pass_nils_to.gemspec",
     "Rakefile",
 		"README",
-		"pass_nils_to.gemspec",
-		"lib/pass_nils_to.rb",
 		"test/pass_nils_to_test.rb",
-		"test/pass_nils_to/browser_test.rb"
+		"test/test_helper.rb"
 		]
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]

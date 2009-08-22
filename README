@@ -20,7 +20,7 @@ Or clone the project:
 
 == Usage
 
-Pass nils to your method thusly:
+Pass nils to your methods thusly:
 
   class Parser
     def parse(arg1, arg2)
